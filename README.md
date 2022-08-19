@@ -1,2 +1,6 @@
-# PWD-TP1
-Trabajo practico de Prog. web. dinamica 1
+# Programacion Web Dinamica - Trabajos practicos
+
+Grupo conformado por:
+  Sabrina Gaspart
+  Daniel Gualda
+  Matias Farfan Eduardo
