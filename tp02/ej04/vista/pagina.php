@@ -13,7 +13,7 @@
 
 <h3>Cinem@</h3>
 
-<form id="cinema" name="cinema" method="get" action="../control/pagina.php" class="row gx-3 align-items-center needs-validation" novalidate>
+<form id="cinema" name="cinema" method="post" action="../control/pagina.php" class="row gx-3 align-items-center needs-validation" novalidate>
 <!-- <form id="cinema" name="cinema" method="get" action="../control/pagina.php" class="row g-3 needs-validation" novalidate> -->
 
 

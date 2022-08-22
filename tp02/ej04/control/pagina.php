@@ -12,30 +12,30 @@ $restric="";
 $sinopsis="";
 $genero="";
 
-if (isset($_GET)) {
+if (isset($_POST)) {
 
-    if (isset($_GET['titulo'])) {
-        $titulo=$_GET['titulo']; }
-    if (isset($_GET['actores'])) {
-    $actores=$_GET['actores']; }
-    if (isset($_GET['director'])) {
-    $director=$_GET['director']; }
-    if (isset($_GET['guion'])) {
-    $guion=$_GET['guion']; }
-    if (isset($_GET['produccion'])) {
-    $produccion=$_GET['produccion']; }
-    if (isset($_GET['anio'])) {
-    $anio=$_GET['anio']; }
-    if (isset($_GET['nacionalidad'])) {
-    $nacionalidad=$_GET['nacionalidad']; }
-    if (isset($_GET['duracion'])) {
-    $duracion=$_GET['duracion']; }
-    if (isset($_GET['restric'])) {
-    $restric=$_GET['restric']; }
-    if (isset($_GET['sinopsis'])) {
-    $sinopsis=$_GET['sinopsis']; }
-    if (isset($_GET['genero'])) {
-    $genero=$_GET['genero']; }
+    if (isset($_POST['titulo'])) {
+        $titulo=$_POST['titulo']; }
+    if (isset($_POST['actores'])) {
+    $actores=$_POST['actores']; }
+    if (isset($_POST['director'])) {
+    $director=$_POST['director']; }
+    if (isset($_POST['guion'])) {
+    $guion=$_POST['guion']; }
+    if (isset($_POST['produccion'])) {
+    $produccion=$_POST['produccion']; }
+    if (isset($_POST['anio'])) {
+    $anio=$_POST['anio']; }
+    if (isset($_POST['nacionalidad'])) {
+    $nacionalidad=$_POST['nacionalidad']; }
+    if (isset($_POST['duracion'])) {
+    $duracion=$_POST['duracion']; }
+    if (isset($_POST['restric'])) {
+    $restric=$_POST['restric']; }
+    if (isset($_POST['sinopsis'])) {
+    $sinopsis=$_POST['sinopsis']; }
+    if (isset($_POST['genero'])) {
+    $genero=$_POST['genero']; }
 } else {
         echo "sin datos";
     return; 
