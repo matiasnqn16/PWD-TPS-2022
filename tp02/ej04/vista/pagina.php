@@ -9,8 +9,6 @@
     <script src="../../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 <body>
     
-</body>
-
 <div class="container">
 
 <h3>Cinem@</h3>
