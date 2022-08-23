@@ -11,7 +11,8 @@
 </head>
 <body>
 
-  <div class="modal-dialog-centered">
+<div class="container">
+<div class="modal-dialog-centered">
 
 <!-- Login Form -->
         <form id="getuser" name="getuser" action="../control/verificaPass.php" method="post" class="row g-3 needs-validation" novalidate> 
@@ -36,9 +37,11 @@
             <button type="submit" class="btn btn-success mx-auto w-100">Login</button>
           </div>
       </form>
+      </div>
+      </div>
+
 
 </body>
-</div>
 
 <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields
