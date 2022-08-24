@@ -10,9 +10,9 @@
     permita adjuntar la imagen de película que se está cargando. Cuando se envía el formulario se 
     deberá guardar la imagen y luego mostrarla junto con la información cargada en el formulario. -->
 
-    <link rel="stylesheet" href="../vista/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../bootstrap-5.2.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../vista/css/estilos.css">
-    <script src="../vista/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="../../bootstrap-5.2.0-dist/js/bootstrap.min.js"></script>
 <body>
 
 <!-- Menu para moverse entre los diferentes puntos del TP3 -->

@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercicio 1 - subir archivos</title>
-    <link rel="stylesheet" href="../vista/bootstrap-5.2.0-dist/css/bootstrap.min.css">
-    <script src="../vista/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <script src="../../bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 
      <!-- Crear un formulario que permita subir un archivo. En el servidor se deberá controlar 
     que el tipo esperado sea txt (texto plano), si es correcto deberá abrir el archivo y mostrar su 
