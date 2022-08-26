@@ -14,12 +14,12 @@
 
 <body>
 
-  <div class="container rounded">
+  <div class="container rounded mt-5">
     <div class="row">
-    <div class="mx-auto">
+    <div class="mx-auto ">
 
       <!-- Login Form -->
-      <form id="getuser" name="getuser" action="../control/verificaPass.php" method="post" class="row g-3 needs-validation" novalidate>
+      <form id="getuser" name="getuser" action="../control/verificaPass.php" method="post" class=" row g-3 needs-validation " novalidate>
         <div class="modal-header">
           <h5 class="modal-title">Member Login</h5>
         </div>
@@ -31,10 +31,11 @@
           </div>
 
           <div class="mb-3">
-            <!--                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required> -->
             <input type="password" id="password" name="password" class="form-control" placeholder="password" pattern="(?=.*\d)(?=.*[a-z]).{8,}" title="debe contener al menos 8 caracteres/alguna letra/algun numero" required>
+            <div class="invalid-feedback">
+              debe contener al menos 8 caracteres/alguna letra/algun numero
+            </div>
 
-            <div class="invalid-feedback">debe contener al menos 8 caracteres/alguna letra/algun numero</div>
           </div>
         </div>
         <div class="modal-footer pt-4">
