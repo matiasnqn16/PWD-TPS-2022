@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="modal-footer pt-4">
-          <button type="submit" class="btn btn-success mx-auto w-100">Login</button>
+          <button id="soyElSubmit" type="submit" class="btn btn-success mx-auto w-100">Login</button>
         </div>
       </form>
     </div>
