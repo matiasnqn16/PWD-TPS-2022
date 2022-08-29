@@ -4,53 +4,47 @@
 
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll('.needs-validation')
-/*    */
+  var data = document.forms['getuser'].getElementsByTagName('input')
+  
+  var a = ""
+  var b = ""
+  
+  data.username.addEventListener("keyup",function(){
+    a=data.username.value
+  },false)
+  
+  data.password.addEventListener("keyup",function(){
+    b=data.password.value
+    if( a === b){
+      data.password.classList.add("is-invalid")
+      document.getElementById('soyElSubmit').classList.add("disabled")
+      
+    }else{
+      document.getElementById('soyElSubmit').classList.remove("disabled")
+      form.classList.remove('was-validated')
+      if(data.password.classList.contains('is-invalid')){
+        data.password.classList.remove('is-invalid')
+      }
+    }
+  },false)
+
 
   // Loop over them and prevent submission
   Array.prototype.slice.call(forms)
     .forEach(function (form) {
       form.addEventListener('submit', function (event) {
 
-/* 
-Cuando se invoca el método checkValidity (), si el elemento es candidato para la validación de restricciones y no satisface sus restricciones, 
-el agente de usuario debe disparar un evento simple llamado inválido que es cancelable (pero en este caso no tiene una acción predeterminada) 
-en el elemento y devuelve falso. De lo contrario, solo debe volver a verdadero sin hacer nada más.
-*/
+        /* Tomando valores para cumplir con algunas validaciones del lado del cliente */
+        var user = data.username.value
+        var pass = data.password.value
 
-        if (!form.checkValidity()) {
+        if (!form.checkValidity() || (user === pass)) {
           event.preventDefault()
           event.stopPropagation()
-
-          /* Tomando valores para cumplir con algunas validaciones del lado del cliente */
-          var data = document.forms['getuser'].getElementsByTagName('input')
-          console.log(data.username.value)
-          console.log(data.password.value)
-          
-        }if (data.username.value.localeCompare(data.username.value)){
-          alert ("la pass y el user son iguales")
-        }if (cumpleReq(data.password.value)){
-          alert ("listo :)")
         }
 
         form.classList.add('was-validated')
       }, false)
-      
+
     })
 })()
-
-function cumpleReq($esto){
-  var cumple = false
-  if(/[a-z]/.test($esto)){
-    alert("contiene minuscula")
-    if(/[A-Z]/.test($esto)){
-      alert("contiene mayuscula")
-      if(/[0-9]/.test($esto)){
-        alert("contiene numeros")
-        cumple = true
-      }
-    }
-  }else{
-    alert("esta Vacio")
-  }
-return cumple
-}
