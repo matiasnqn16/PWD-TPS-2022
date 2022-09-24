@@ -20,27 +20,41 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
 
 </head>
 <body>
-    <h3>Buscar Auto</h3>
-    <?php 
-    if(isset($busqueda['Patente'])){
-        
-        echo "<p>La matricula :". $busqueda['Patente'] ."</p>";
-        $datos = $auto->buscar($busqueda);
-        if(isset($datos[0])){
-            echo "<br>";
-            echo "<table border=1><tr><td><b>Patente<b></td><td><b>Marca<b></td><td><b>Modelo<b></td><td><b>Dni Asociado<b></td></tr>";
-            echo "<tr><td>".$datos[0]->getpatente()."</td>";
-            echo "<td>".$datos[0]->getmarca()."</td>";
-            echo "<td>".$datos[0]->getmodelo()."</td>";
-            echo "<td>".$datos[0]->getOBJduenio()."</td></tr></table>";
-        }else{
-            echo "<p> No existe en la base de datos <p>";
-        }
-        }else 
-        {?>
-        <p>No se ha recibido ninguna matricula</p>
+<?php include_once "../../util/Estructura/header2.php"; ?>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto mt-3">
 
-    <?php }; ?>
-    
+
+            <h3>Buscar Auto</h3>
+            <?php 
+            if(isset($busqueda['Patente'])){
+                
+                echo "<p>La matricula : ". $busqueda['Patente'] ."</p>";
+                $datos = $auto->buscar($busqueda);
+                if(isset($datos[0])){
+                    echo "<br>";
+                    echo "<table class='table caption-top table-dark'><tr class='table-active'><td><b>Patente<b></td><td><b>Marca<b></td><td><b>Modelo<b></td><td><b>Dni Asociado<b></td></tr>";
+                    echo "<tr><td>".$datos[0]->getpatente()."</td>";
+                    echo "<td>".$datos[0]->getmarca()."</td>";
+                    echo "<td>".$datos[0]->getmodelo()."</td>";
+                    echo "<td>".$datos[0]->getOBJduenio()."</td></tr></table>";
+                }else{
+                    echo "<p class='alert alert-info'> No existe en la base de datos <p>";
+                }
+                }else 
+                {?>
+                <p class='alert alert-info'>No se ha recibido ninguna matricula</p>
+        
+            <?php }; ?>
+            
+            <br><br><br>
+            <a class="btn btn-secondary" href="javascript: history.go(-1)">Volver</a>
+            <br><br><br>
+        </div>
+    </div>
+</div>
+<?php include_once "../../util/Estructura/footer.php"; ?>
+
 </body>
 </html>

@@ -110,7 +110,11 @@ class Auto{
                 
                 while ($row = $base->Registro()){
                     $obj= new Auto();
-                    $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']);
+                    /* $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']); */
+                    $OBJpersona = new Persona();
+                    $OBJpersona->Buscar($row['DniDuenio']);
+                    $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $OBJpersona);
+
                     array_push($arreglo, $obj);
                 }
                
@@ -142,7 +146,7 @@ class Auto{
     public function modificar(){
         $resp = false;
         $base=new BaseDatos();
-        $sql="UPDATE auto SET Marca='".$this->getmarca()."',Modelo='".$this->getmodelo()."',DniDuenio='".$this->getOBJduenio()->getnrodni()."' WHERE Patente=".$this->getpatente();
+        $sql="UPDATE auto SET Marca='".$this->getmarca()."',Modelo='".$this->getmodelo()."',DniDuenio='".$this->getOBJduenio()->getnrodni()."' WHERE Patente='".$this->getpatente()."'";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;

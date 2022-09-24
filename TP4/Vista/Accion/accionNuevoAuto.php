@@ -1,8 +1,8 @@
 <?php
 include_once "../../configuracion.php";
 $nuevoAuto = data_submitted();
-$existePersona = new CtrlPersona();
-$existeAuto = new CtrlAuto();
+$OBJexistePersona = new CtrlPersona();
+$OBJexisteAuto = new CtrlAuto();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,30 +13,47 @@ $existeAuto = new CtrlAuto();
     <title>Agregando Nuevo Auto</title>
 </head>
 <body>
-    <h3>Agregando Nuevo Auto</h3>
-    <?php
-    if(isset($nuevoAuto)){
-        $listaAutos = $existeAuto->buscar(NULL);
-        $flag = $existeAuto->existe($listaAutos,$nuevoAuto);
-        if(!$flag){
-            if($existePersona->buscarPorDni($nuevoAuto['DniDuenio'])){
-                $persona = $existePersona->buscarPorDni($nuevoAuto['DniDuenio']);
-                $nuevoAuto['DniDuenio'] = $persona;
-                if($existeAuto->alta($nuevoAuto)){
-                    echo "<p>Se agrego con exito!<p>";
+<?php include_once "../../util/Estructura/header2.php"; ?>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto">
+
+
+
+            <h3>Agregando Nuevo Auto</h3>
+            <?php
+            if(isset($nuevoAuto)){
+                $listaAutos = $OBJexisteAuto->buscar(NULL);
+                $flag = $OBJexisteAuto->existe($listaAutos,$nuevoAuto);
+                if(!$flag){
+                    if($OBJexistePersona->buscarPorDni($nuevoAuto['DniDuenio'])){
+                        $OBJpersona = new Persona();
+                        $OBJpersona->buscar($nuevoAuto['DniDuenio']);
+                        $nuevoAuto['OBJduenio'] = $OBJpersona;
+                        if($OBJexisteAuto->alta($nuevoAuto)){
+                            echo "<p class='alert alert-success'>Se agrego con exito!<p>";
+                        }else{
+                            echo "<p class='alert alert-info'>No se pudo agregar el dato<p>";  
+                        }
+                    }else{
+                        echo "<p class='alert alert-info'>No existe la persona en la BD</p><br><p>agregar <a class='btn btn-dark' href='../NuevaPersona.php'>Nueva Persona</a></p>";
+                    }
                 }else{
-                    echo "No se pudo agregar el dato";  
+                    echo "<p class='alert alert-info'>La patente ya esta en uso<p>";
                 }
             }else{
-                echo "<p>No existe la persona en la BD</p><br><p>agregar <a href='../NuevaPersona.php'>Nueva Persona</a></p>";
+                echo "<p class='alert alert-danger'> No se encontraron datos <p>";
             }
-        }else{
-            echo "La patente ya esta en uso";
-        }
-    }else{
-        echo "<p> No se encontraron datos <p>";
-    }
-    ?>
+            ?>
+            <br><br><br>
+                    <a class="btn btn-secondary" href="javascript: history.go(-1)">Volver</a>
+                    <br><br><br>
+
+        </div>
+    </div>
+</div>
+
+    <?php include_once "../../util/Estructura/footer.php"; ?>
 
 </body>
 </html>

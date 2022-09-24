@@ -12,9 +12,9 @@ class CtrlAuto{
     private function cargarObjeto($param){
         $obj = null;
            
-        if( array_key_exists('Patente',$param) and array_key_exists('Marca',$param)and array_key_exists('Modelo',$param)and array_key_exists('DniDuenio',$param)){
+        if( array_key_exists('Patente',$param) and array_key_exists('Marca',$param)and array_key_exists('Modelo',$param)and array_key_exists('OBJduenio',$param)){
             $obj = new Auto();
-            $obj->setear($param['Patente'], $param['Marca'],$param['Modelo'],$param['DniDuenio']);
+            $obj->setear($param['Patente'], $param['Marca'],$param['Modelo'],$param['OBJduenio']);
         }
         return $obj;
     }

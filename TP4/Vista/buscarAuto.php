@@ -20,16 +20,28 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
 </head>
 <body>
 <?php include_once "../util/Estructura/header.php"; ?>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto mt-3">
+            <h3>Buscar Auto</h3>
+            <br>
+            
+            <div class="col-3">
+            <form id="Pat" action="Accion/accionBuscarAuto.php" method="get" autocomplete="off" class="needs-validation">
+                    <label  for="Patente">Ingrese la patente:</label>
+                    <input class="form-control" type="text" name="Patente" id="Patente" maxlength="7" placeholder="ABC 123" required>
+                    <div class="mt-3">
+                        <button class="btn btn-secondary" type="reset">Limpiar</button>
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
+                </form>
+                </div>
 
+        </div>
+    </div>
+</div>
 
-<h3>Buscar Auto</h3>
-<br>
-
-<form id="Patente" action="Accion/accionBuscarAuto.php" method="get" autocomplete="off">
-    <label for="Patente">Ingrese la patente:</label>
-    <input type="text" name="Patente" id="Patente" pattern="[a-zA-Z0-9\s]{6,7}" required>
-    <button type="submit">Buscar</button>
-</form>
+<?php include_once "../util/Estructura/footer.php"; ?>
 
 </body>
 

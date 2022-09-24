@@ -1,7 +1,7 @@
 <?php
 include_once "../../configuracion.php";
 $nuevaPersona = data_submitted();
-$sumarPersona = new CtrlPersona();
+$OBJsumarPersona = new CtrlPersona();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,30 +12,45 @@ $sumarPersona = new CtrlPersona();
     <title>Agregando Nueva Persona</title>
 </head>
 <body>
-    <h3>Agregando Nueva Persona</h3>
-    <?php
-    if(isset($nuevaPersona)){
-        $listaPersonas = $sumarPersona->buscar(NULL);
-        $flag = false;
-        foreach($listaPersonas as $Persona){
-            if($Persona->getnrodni() == $nuevaPersona['NroDni']){
-                $flag = true;
-            }
-        }
-        if(!$flag){
-            if($sumarPersona->alta($nuevaPersona)){
-                echo "<p>Se agrego con exito!<p>";
-            }else{
-                echo "No se pudo agregar el dato";
-            }
-        }else{
-            echo "El dni ya existe";
-        }
+<?php include_once "../../util/Estructura/header2.php"; ?>
+<div class="container">
+    <div class="row">
+        <div class="mx-auto mt-3">
 
-    }else{
-        echo "<p> No se encontraron datos <p>";
-    }
-    ?>
+            <h3>Agregando Nueva Persona</h3>
+            <?php
+            if(isset($nuevaPersona)){
+                $listaPersonas = $OBJsumarPersona->buscar(NULL);
+                $flag = false;
+                foreach($listaPersonas as $Persona){
+                    if($Persona->getnrodni() == $nuevaPersona['NroDni']){
+                        $flag = true;
+                    }
+                }
+                if(!$flag){
+                    if($OBJsumarPersona->alta($nuevaPersona)){
+                        echo "<p class='alert alert-success'>Se agrego con exito!</p>";
+                    }else{
+                        echo "<p class='alert alert-info'>No se pudo agregar el dato</p>";
+                    }
+                }else{
+                    echo "<p class='alert alert-info'>El dni ya existe</p>";
+                }
+        
+            }else{
+                echo "<p class='alert alert-info'> No se encontraron datos <p>";
+            }
+            ?>
+        
+            <br><br><br>
+            <a class="btn btn-secondary" href="javascript: history.go(-1)">Volver</a>
+            <br><br><br>
+
+
+        </div>
+    </div>
+</div>
+<?php include_once "../../util/Estructura/footer.php"; ?>
 
 </body>
 </html>
