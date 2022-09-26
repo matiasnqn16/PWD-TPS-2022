@@ -32,7 +32,7 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
     <?php 
     if(isset($busqueda['NroDni'])){
         
-        echo "<p>". $busqueda['NroDni'] ."</p>";
+        echo "<p> Dni: ". $busqueda['NroDni'] ."</p>";
         $datos = $OBJpersona->buscar($busqueda);
         if(isset($datos[0])){
             echo "<br>";
@@ -51,7 +51,7 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
         }
         }else 
         {?>
-        <p class='alert alert-danger'>No se ha recibido ninguna matricula</p>
+        <p class='alert alert-danger'>No se ha recibido ningun Dni</p>
 
     <?php }; ?>
     <br><br><br>        

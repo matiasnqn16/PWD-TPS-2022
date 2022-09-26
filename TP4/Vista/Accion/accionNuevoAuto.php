@@ -22,7 +22,7 @@ $OBJexisteAuto = new CtrlAuto();
 
             <h3>Agregando Nuevo Auto</h3>
             <?php
-            if(isset($nuevoAuto)){
+            if(isset($nuevoAuto['DniDuenio'])){
                 $listaAutos = $OBJexisteAuto->buscar(NULL);
                 $flag = $OBJexisteAuto->existe($listaAutos,$nuevoAuto);
                 if(!$flag){

@@ -21,7 +21,7 @@ $OBJexisteAuto = new CtrlAuto();
 
     <h3>Cambio de Titular</h3>
     <?php
-    if(isset($datos)){
+    if(isset($datos['Patente'],$datos['NroDni'])){
         $encontroAuto = $OBJexisteAuto->buscar($datos);
         $encontroPersona= $OBJexistePersona->buscar($datos);    
 

@@ -36,7 +36,7 @@ if (isset($datos['NroDni'])) {
 						<div class="col-12 mb-3">
 							<div class="col-3">
 								<label for="NrpDni" class="form-label" >Nro Dni</label>
-								<input class="form-control bg-primary" id="NroDni" readonly name="NroDni" width="80" type="text" value="<?php echo $obj->getnrodni() ?>" >
+								<input class="form-control bg-primary" id="NroDni" readonly name="NroDni" type="text" value="<?php echo $obj->getnrodni() ?>" >
 								
 							</div>
 
@@ -63,7 +63,7 @@ if (isset($datos['NroDni'])) {
 							</div>
 							<div class="col-4 mb-3">
 								<label for="Telefono" class="form-label">Telefono</label>
-								<input class="form-control" type="tel" name="Telefono" id="Telefono" maxlength="10" value="<?php echo $obj->gettel() ?>" required>
+								<input class="form-control" type="text" name="Telefono" id="Telefono" maxlength="10" value="<?php echo $obj->gettel() ?>" required>
 								<div class="valid-feedback">Check!</div>
                     			<div class="invalid-feedback">Campo necesario</div>
 

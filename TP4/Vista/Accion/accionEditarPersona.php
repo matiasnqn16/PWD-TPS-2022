@@ -2,7 +2,6 @@
 include_once "../../configuracion.php";
 $datosPersona = data_submitted();
 $objPersona = new CtrlPersona();
-var_dump($datosPersona);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@ var_dump($datosPersona);
 
     <h3>Graba edicion de Persona</h3>
     <?php
-    if(isset($datosPersona)){
+    if(isset($datosPersona['NroDni'],$datosPersona['Apellido'],$datosPersona['Nombre'],$datosPersona['Telefono'])){
        if($objPersona->modificacion($datosPersona)){
           echo "<p class='alert alert-success'>Se grabo con exito!<p>";
         }else{
@@ -31,7 +30,7 @@ var_dump($datosPersona);
       }
 
     }else{
-        echo "<p<p class='alert alert-danger'>> No se encontraron datos <p>";
+        echo "<p<p class='alert alert-danger'>> No se encontraron datos / pocos datos<p>";
     }
     ?>
 

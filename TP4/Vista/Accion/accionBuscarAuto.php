@@ -38,13 +38,13 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
                     echo "<tr><td>".$datos[0]->getpatente()."</td>";
                     echo "<td>".$datos[0]->getmarca()."</td>";
                     echo "<td>".$datos[0]->getmodelo()."</td>";
-                    echo "<td>".$datos[0]->getOBJduenio()."</td></tr></table>";
+                    echo "<td>".$datos[0]->getOBJduenio()->getnrodni()."</td></tr></table>";
                 }else{
                     echo "<p class='alert alert-info'> No existe en la base de datos <p>";
                 }
                 }else 
                 {?>
-                <p class='alert alert-info'>No se ha recibido ninguna matricula</p>
+                <p class='alert alert-danger'>No se ha recibido ninguna matricula</p>
         
             <?php }; ?>
             

@@ -27,9 +27,11 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
             <br>
             
             <div class="col-3">
-            <form id="Pat" action="Accion/accionBuscarAuto.php" method="get" autocomplete="off" class="needs-validation">
-                    <label  for="Patente">Ingrese la patente:</label>
-                    <input class="form-control" type="text" name="Patente" id="Patente" maxlength="7" placeholder="ABC 123" required>
+            <form id="Pat" action="Accion/accionBuscarAuto.php" method="get" autocomplete="off" class="needs-validation" novalidate>
+                    <label  for="Patente" class="form-label">Ingrese la patente:</label>
+                    <input class="form-control" type="text" name="Patente" id="Patente" maxlength="7" pattern="[A-Z]{3}\s[0-9]{3}" placeholder="ABC 123" required>
+                    <div class="valid-feedback">Check!</div>
+                    <div class="invalid-feedback">Debe ingresar una patente valide, por ej: "ABC 123"</div>
                     <div class="mt-3">
                         <button class="btn btn-secondary" type="reset">Limpiar</button>
                         <button class="btn btn-primary" type="submit">Buscar</button>

@@ -20,24 +20,24 @@ $date = date('Y-m-d');
             <form class="row gx-3 align-items-center needs-validation" id="Persona" action="accion/accionNuevaPersona.php" method="get" novalidate>
                 <div class="col-4 mb-3">
                     <label for="NroDni" class="form-label">Ingrese DNI</label>
-                    <input class="form-control " type="text" name="NroDni" id="NroDni" pattern="[0-9]{8}" maxlength="8" required>
+                    <input class="form-control " type="text" name="NroDni" id="NroDni" pattern="[0-9]{8}" maxlength="8" placeholder="Ej: 23456789" required>
                     <div class="valid-feedback">Check!</div>
-                    <div class="invalid-feedback">Campo necesario</div>
+                    <div class="invalid-feedback">Campo necesario, Ej: 23456789</div>
                 </div>
                 <br>
                 <div class="col-4 mb-3">
                     <label for="Apellido" class="form-label">Apellido</label>
-                    <input class="form-control" type="text" name="Apellido" id="Apellido" maxlength="20" required>
+                    <input class="form-control" type="text" name="Apellido" id="Apellido" maxlength="20" placeholder="Ej: Lopez" required>
                     <div class="valid-feedback">Check!</div>
-                    <div class="invalid-feedback">Campo necesario</div>
+                    <div class="invalid-feedback">Campo necesario, Ej: Lopez</div>
 
                 </div>
                 <br>
                 <div class="col-4 mb-3">
                     <label for="Nombre" class="form-label">Nombre</label>
-                    <input class="form-control" type="text" name="Nombre" id="Nombre" maxlength="20" required>
+                    <input class="form-control" type="text" name="Nombre" id="Nombre" maxlength="20" placeholder="Ej: Ignacio" required>
                     <div class="valid-feedback">Check!</div>
-                    <div class="invalid-feedback">Campo necesario</div>
+                    <div class="invalid-feedback">Campo necesario, Ej: dylan</div>
 
                 </div>
                 <br>
@@ -51,17 +51,17 @@ $date = date('Y-m-d');
                 <br>
                 <div class="col-4 mb-3">                  
                     <label for="Telefono" class="form-label">Telefono</label>
-                    <input class="form-control" type="tel" name="Telefono" id="Telefono" pattern="[0-9]{10}" maxlength="10" required>
+                    <input class="form-control" type="text" name="Telefono" id="Telefono" pattern="[0-9]{10}" maxlength="10" placeholder="Ej: 2993456789" required>
                     <div class="valid-feedback">Check!</div>
-                    <div class="invalid-feedback">Campo necesario</div>
+                    <div class="invalid-feedback">Campo necesario, Ej: 2991234567</div>
 
                 </div>
                 <br>
                 <div class="col-4 mb-3">                   
                     <label for="Domicilio" class="form-label">Domicilio</label>
-                    <input class="form-control" type="text" name="Domicilio" id="Domicilio" maxlength="20" required>
+                    <input class="form-control" type="text" name="Domicilio" id="Domicilio" maxlength="20" placeholder="Ej: Rivadavia 800" required>
                     <div class="valid-feedback">Check!</div>
-                    <div class="invalid-feedback">Campo necesario</div>
+                    <div class="invalid-feedback">Campo necesario, Ej: Rivadavia 800</div>
 
                 </div>
                 <br>

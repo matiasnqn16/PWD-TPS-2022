@@ -24,9 +24,11 @@ include_once "../configuracion.php";
                 <h3>Buscar Persona</h3>
                 <br>
                 <div class="col-3">
-                <form id="Persona" action="Accion/accionBuscarPersona.php" method="get" autocomplete="off" class="needs-validation">
+                <form id="Persona" action="Accion/accionBuscarPersona.php" method="get" autocomplete="off" class="needs-validation" novalidate>
                     <label for="NroDni">Ingrese NroDni:</label>
-                    <input class="form-control" type="text" name="NroDni" id="NroDni" pattern="[0-9]{8}" maxlength="8" max="99999999" required>
+                    <input class="form-control" type="text" name="NroDni" id="NroDni" pattern="[0-9]{8}" placeholder="Ej: 23456789" maxlength="8" max="99999999" required>
+                    <div class="valid-feedback">Check!</div>
+                    <div class="invalid-feedback">Campo necesario, Ej: 23456789</div>
                     <div class="mt-3">
                         <button class="btn btn-secondary" type="reset">Limpiar</button>
                         <button class="btn btn-dark" type="submit">Buscar</button>
@@ -40,5 +42,5 @@ include_once "../configuracion.php";
 
     <?php include_once "../util/Estructura/footer.php"; ?>
 </body>
-
+<script src="../util/js/verifPersona.js"></script>
 </html>

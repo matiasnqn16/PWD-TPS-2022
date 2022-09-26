@@ -19,35 +19,40 @@ $date = date('Y-m-d');
 
 
                 <h3>Agregar Vehiculo</h3>
-                <form class="row gx-3 align-items-center needs-validation" id="Auto" action="accion/accionNuevoAuto.php" method="get">
+                <form class="row gx-3 align-items-center needs-validation" id="Auto" action="accion/accionNuevoAuto.php" method="get" novalidate>
                     <div class="col-3 mb-3">
-
-                        <label for="Patente">Ingrese Patente</label>
-                        <input class="form-control " type="text" name="Patente" id="Patente" placeholder="ABC 123" pattern="[a-zA-Z0-9\s]{7,9}" maxlength="8" required>
+                        <label for="Patente" class="form-label">Ingrese Patente</label>
+                        <input class="form-control" type="text" name="Patente" id="Patente" placeholder="Ej: ABC 123" pattern="[A-Z]{3}\s[0-9]{3}" maxlength="7" required>
+                        <div class="valid-feedback">Check!</div>
+                        <div class="invalid-feedback">Campo necesario</div>
                     </div>
-                    <br>
                     <div class="col-3 mb-3">
 
-                        <label for="Marca">Marca</label>
-                        <input class="form-control " type="text" name="Marca" id="Marca" required>
+                        <label for="Marca" class="form-label">Marca</label>
+                        <input class="form-control" type="text" name="Marca" id="Marca" pattern="[a-zA-Z0-9]" maxlength="20" required>
+                        <div class="valid-feedback">Check!</div>
+                        <div class="invalid-feedback">Campo necesario</div>
+
                     </div>
-                    <br>
                     <div class="col-3 mb-3">
 
-                        <label for="Modelo">Modelo</label>
-                        <input class="form-control " type="number" name="Modelo" id="Modelo" required>
+                        <label for="Modelo" class="form-label">Modelo</label>
+                        <input class="form-control" type="number" name="Modelo" id="Modelo" min="20" max="2100" required>
+                        <div class="valid-feedback">Check!</div>
+                        <div class="invalid-feedback">Campo necesario</div>
+
                     </div>
-                    <br>
                     <div class="col-3 mb-3">
 
-                        <label for="DniDuenio">DNI dueño</label>
+                        <label for="DniDuenio" class="form-label">DNI dueño</label>
                         <input class="form-control " type="number" name="DniDuenio" id="DniDuenio" pattern="[0-9]{8}" maxlength="8" required>
+                        <div class="valid-feedback">Check!</div>
+                        <div class="invalid-feedback">Campo necesario</div>
+
                     </div>
-                    <br>
                     <div class="mb-3">
                     <button class="btn btn-secondary" type="reset">Limpiar</button>
-
-                        <button class="btn btn-dark" type="submit">Enviar Datos</button>
+                    <button class="btn btn-dark" type="submit">Enviar Datos</button>
                     </div>
                 </form>
 

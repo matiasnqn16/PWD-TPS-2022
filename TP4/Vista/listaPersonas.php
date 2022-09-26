@@ -45,7 +45,7 @@ generada, no se puede acceder directamente a las clases del ORM -->
                     echo '<td>'.$objPersona->getfnac().'</td>';
                     echo '<td>'.$objPersona->gettel().'</td>';
                     echo '<td>'.$objPersona->getdomi().'</td>';
-                    echo '<td><a class="btn btn-primary" href="accion/autosPersona.php?NroDni='.$objPersona->getnrodni().'">Ver vehiculos</a></td></tr>'; 
+                    echo '<td><a class="btn btn-secondary" href="accion/autosPersona.php?NroDni='.$objPersona->getnrodni().'">Ver vehiculos</a></td></tr>'; 
                 }
             ?>
             <?php }else {
