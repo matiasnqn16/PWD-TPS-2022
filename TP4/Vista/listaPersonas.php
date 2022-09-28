@@ -10,7 +10,7 @@ $listaPersonas = $objPersonas->buscar(null);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<?php include_once "../util/Estructura/header.php"; ?>
+<?php include_once "Estructura/header.php"; ?>
 <!-- Crear una página "listaPersonas.php" que muestre un listado con las personas que se
 encuentran cargadas y un link a otra página “autosPersona.php” que recibe un dni de una persona y muestra
 los datos de la persona y un listado de los autos que tiene asociados. Recordar usar la capa de control antes
@@ -59,7 +59,7 @@ generada, no se puede acceder directamente a las clases del ORM -->
         </div>
     </div>
 </div>
-<?php include_once "../util/Estructura/footer.php"; ?>
+<?php include_once "Estructura/footer.php"; ?>
 
 </body>
 </html>

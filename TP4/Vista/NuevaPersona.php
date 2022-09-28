@@ -11,7 +11,7 @@ $date = date('Y-m-d');
     <title>Agregar Persona</title>
 </head>
 <body>
-<?php include_once "../util/Estructura/header.php"; ?>
+<?php include_once "Estructura/header.php"; ?>
 <div class="container">
     <div class="row">
         <div class="mx-auto mt-3">
@@ -77,10 +77,10 @@ $date = date('Y-m-d');
         </div>
     </div>
 </div>
-<?php include_once "../util/Estructura/footer.php"; ?>
+<?php include_once "Estructura/footer.php"; ?>
 
 </body>
 
-<script src="../util/js/verifPersona.js"></script>
+<script src="js/verifPersona.js"></script>
 
 </html>

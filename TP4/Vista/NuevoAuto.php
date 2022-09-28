@@ -12,7 +12,7 @@ $date = date('Y-m-d');
 </head>
 
 <body>
-    <?php include_once "../util/Estructura/header.php"; ?>
+    <?php include_once "Estructura/header.php"; ?>
     <div class="container">
         <div class="row">
             <div class="mx-auto mt-3">
@@ -60,8 +60,8 @@ $date = date('Y-m-d');
             </div>
         </div>
     </div>
-    <?php include_once "../util/Estructura/footer.php"; ?>
+    <?php include_once "Estructura/footer.php"; ?>
 
 </body>
-<script src="../util/js/verifAuto.js"></script>
+<script src="js/verifAuto.js"></script>
 </html>

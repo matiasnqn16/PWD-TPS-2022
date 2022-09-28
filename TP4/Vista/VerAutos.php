@@ -10,7 +10,7 @@ $listaAutos = $objAutos->buscar(null);
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<?php include_once "../util/Estructura/header.php"; ?>
+<?php include_once "Estructura/header.php"; ?>
 
 <!-- Crear una pagina php “VerAutos.php”, en ella usando la capa de control correspondiente
 mostrar todos los datos de los autos que se encuentran cargados, de los dueños mostrar nombre y apellido.
@@ -60,7 +60,7 @@ autos cargados.
         </div>
     </div>
 </div>
-<?php include_once "../util/Estructura/footer.php"; ?>
+<?php include_once "Estructura/footer.php"; ?>
 
 </body>
 </html>
