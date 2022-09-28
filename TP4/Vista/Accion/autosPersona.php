@@ -14,7 +14,7 @@ include_once "../../configuracion.php";
     <title>Autos de la Persona</title>
 </head>
 <body>
-<?php include_once "../../util/Estructura/header2.php"; ?>
+<?php include_once "../Estructura/header2.php"; ?>
 
 <div class="container">
     <div class="row">
@@ -61,7 +61,7 @@ include_once "../../configuracion.php";
         </div>
     </div>
 </div>
-<?php include_once "../../util/Estructura/footer.php"; ?>
+<?php include_once "../Estructura/footer.php"; ?>
 
 </body>
 </html>

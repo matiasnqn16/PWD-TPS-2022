@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php include_once "../util/Estructura/header.php"; ?>
+<?php include_once "Estructura/header.php"; ?>
 <div >
 
 <div class="card mb-3 container align-items-center">

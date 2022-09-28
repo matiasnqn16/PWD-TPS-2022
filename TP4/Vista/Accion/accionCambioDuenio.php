@@ -13,7 +13,7 @@ $OBJexisteAuto = new CtrlAuto();
     <title>Cambiando Dueño</title>
 </head>
 <body>
-<?php include_once "../../util/Estructura/header2.php"; ?>
+<?php include_once "../Estructura/header2.php"; ?>
 
 <div class="container">
     <div class="row">
@@ -57,6 +57,6 @@ $OBJexisteAuto = new CtrlAuto();
 
 
 
-
+<?php include_once "../Estructura/footer.php"; ?>
 </body>
 </html>

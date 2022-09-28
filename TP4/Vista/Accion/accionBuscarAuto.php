@@ -20,7 +20,7 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
 
 </head>
 <body>
-<?php include_once "../../util/Estructura/header2.php"; ?>
+<?php include_once "../Estructura/header2.php"; ?>
 <div class="container">
     <div class="row">
         <div class="mx-auto mt-3">
@@ -54,7 +54,7 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
         </div>
     </div>
 </div>
-<?php include_once "../../util/Estructura/footer.php"; ?>
+<?php include_once "../Estructura/footer.php"; ?>
 
 </body>
 </html>

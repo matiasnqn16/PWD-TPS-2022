@@ -19,7 +19,7 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
 
 </head>
 <body>
-<?php include_once "../util/Estructura/header.php"; ?>
+<?php include_once "Estructura/header.php"; ?>
 <div class="container">
     <div class="row">
         <div class="mx-auto mt-3">
@@ -43,10 +43,10 @@ Utilizar css y validaciones javaScript cuando crea conveniente -->
     </div>
 </div>
 
-<?php include_once "../util/Estructura/footer.php"; ?>
+<?php include_once "Estructura/footer.php"; ?>
 
 </body>
 
-<script src="../util/js/verificarPatente.js"></script>
+<script src="js/verificarPatente.js"></script>
 
 </html>

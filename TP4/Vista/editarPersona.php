@@ -25,7 +25,7 @@ if (isset($datos['NroDni'])) {
 </head>
 
 <body>
-	<?php include_once "../util/Estructura/header.php"; ?>
+	<?php include_once "Estructura/header.php"; ?>
 	<div class="container">
 		<div class="row">
 			<div class="mx-auto mt-3">
@@ -88,11 +88,11 @@ if (isset($datos['NroDni'])) {
 					echo "<p>No se encontro la clave que desea modificar";
 				} ?>
 
-				<?php include_once "../util/Estructura/footer.php"; ?>
+				<?php include_once "Estructura/footer.php"; ?>
 			</div>
 		</div>
 	</div>
 </body>
-<script src="../util/js/verifPersona.js"></script>
+<script src="js/verifPersona.js"></script>
 
 </html>

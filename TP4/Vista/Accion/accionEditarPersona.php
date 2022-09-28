@@ -14,7 +14,7 @@ $objPersona = new CtrlPersona();
     <title>Graba edicion de persona</title>
 </head>
 <body>
-<?php include_once "../../util/Estructura/header2.php"; ?>
+<?php include_once "../Estructura/header2.php"; ?>
 <div class="container">
  <div class="row">
  <div class="mx-auto mt-3"> 
@@ -46,8 +46,7 @@ $objPersona = new CtrlPersona();
 
 
 
-<?php include_once "../../util/Estructura/footer.php"; ?>
+<?php include_once "../Estructura/footer.php"; ?>
 </body>
-<script src="../../Vista/js/fnt-pag.js"></script>
 
 </html>
